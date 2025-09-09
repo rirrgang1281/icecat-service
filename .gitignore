@@ -1,0 +1,29 @@
+# These are some examples of commonly ignored file patterns.
+# You should customize this list as applicable to your project.
+# Learn more about .gitignore:
+#     https://www.atlassian.com/git/tutorials/saving-changes/gitignore
+
+# JetBrains IDE
+.idea/
+
+###> symfony/framework-bundle ###
+/.env
+/.env.local
+/var/*
+/vendor/
+###< symfony/framework-bundle ###
+
+###> Docker files ###
+.docker/logs/*
+!.docker/logs/.gitkeep
+!.docker/logs/apache2/.gitkeep
+###< Docker files ###
+
+###> friendsofphp/php-cs-fixer ###
+/.php-cs-fixer.php.dist
+/.php-cs-fixer.cache
+###< friendsofphp/php-cs-fixer ###
+
+###> phpunit/phpunit ###
+.phpunit.result.cache
+###< phpunit/phpunit ###

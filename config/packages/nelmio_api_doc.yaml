@@ -1,0 +1,13 @@
+nelmio_api_doc:
+
+    documentation:
+        host:  http://172.200.0.2/
+        info:
+            title: Symfony IceCat Connector
+            description: Symfony IceCat Connector
+            version: 1.0.0
+            x-build: #CommitHash
+    areas:
+        disable_default_routes: true
+        path_patterns: [ ^/api ]
+

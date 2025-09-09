@@ -1,0 +1,53 @@
+# This file is the entry point to configure your own services.
+# Files in the packages/ subdirectory configure your dependencies.
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
+parameters:
+
+services:
+    # default configuration for services in *this* file
+    _defaults:
+        autowire: true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+    Sdn\IcecatService\:
+        resource: '../src/'
+        exclude:
+            - '../src/DependencyInjection/'
+            - '../src/Entity/'
+            - '../src/Kernel.php'
+    
+    Sdn\IcecatService\Controller\:
+        resource: '../src/Controller'
+        tags: [ 'controller.service_arguments' ]
+
+    sdn.icecat_service.service.product_service:
+        class: Sdn\IcecatService\Service\ProductService
+        arguments:
+            $logger: '@logger'
+            $jmsSerializerService: '@sdn.icecat_service.service.jms_serializer_service'
+            $iceCatServiceClient: '@sdn.icecat_service.client.ice_cat_service_client'
+
+    sdn.icecat_service.service.jms_serializer_service:
+        class: Sdn\IcecatService\Service\JmsSerializerService
+        arguments:
+            $serializer: '@JMS\Serializer\SerializerInterface'
+            
+    Sdn\IcecatService\Command\ImportIcecatJsonCommand:
+        arguments:
+            $productService: '@sdn.icecat_service.service.product_service'
+            
+    Sdn\IcecatService\Controller\BaseApiController:
+        arguments:
+            $apiToken: '%env(ICECAT_SERVICE_API_TOKEN)%'
+            $logger: '@logger'
+        
+    Sdn\IcecatService\Controller\ApiController:
+        arguments:
+            $apiToken: '%env(ICECAT_SERVICE_API_TOKEN)%'
+            $productService: '@sdn.icecat_service.service.product_service'
+        tags: [ 'controller.service_arguments' ]
+            
+    guzzle.client:
+        class: GuzzleHttp\Client

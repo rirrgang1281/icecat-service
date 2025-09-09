@@ -1,0 +1,10 @@
+services:
+    sdn.icecat_service.client.ice_cat_service_client:
+        class: Sdn\IcecatService\Client\IceCatServiceClient
+        arguments:
+            $client: '@guzzle.client'
+            $logger: '@logger'
+            $icecatBaseUrl: '%env(ICECAT_BASE_URL)%'
+            $icecatUser: '%env(ICECAT_USER)%'
+            $isIcecatServiceEnabled: '%env(bool:ICECAT_SERVICE_ENABLED)%'
+

@@ -1,0 +1,8 @@
+services:
+    GuzzleHttp\ClientInterface: '@GuzzleHttp\Client'
+
+    GuzzleHttp\Client:
+        arguments:
+            -   base_uri: '%env(API_BASE_URL)%'
+                auth: ['%env(API_USER)%', '%env(API_PASSWORD)%']
+                timeout: '%env(API_TIMEOUT)%'
