@@ -19,18 +19,18 @@
         "nelmio/api-doc-bundle": "^4.26",
         "nelmio/cors-bundle": "^2.4",
         "opis/json-schema": "^2.3",
-        "symfony/dotenv": "7.1.*",
-        "symfony/expression-language": "7.1.*",
+        "symfony/dotenv": "7.3.*",
+        "symfony/expression-language": "7.3.*",
         "symfony/flex": "^2",
-        "symfony/framework-bundle": "7.1.*",
-        "symfony/http-client": "7.1.*",
-        "symfony/intl": "7.1.*",
+        "symfony/framework-bundle": "7.3.*",
+        "symfony/http-client": "7.3.*",
+        "symfony/intl": "7.3.*",
         "symfony/monolog-bundle": "^3.10",
-        "symfony/property-access": "7.1.*",
-        "symfony/runtime": "7.1.*",
-        "symfony/uid": "7.1.*",
-        "symfony/var-exporter": "7.1.*",
-        "symfony/yaml": "7.1.*",
+        "symfony/property-access": "7.3.*",
+        "symfony/runtime": "7.3.*",
+        "symfony/uid": "7.3.*",
+        "symfony/var-exporter": "7.3.*",
+        "symfony/yaml": "7.3.*",
         "vin-sw/shopware-sdk": "^2.0"
     },
     "require-dev": {
@@ -47,7 +47,7 @@
         "symfony/maker-bundle": "^1.59",
         "tomasvotruba/class-leak": "^0.2.13",
         "tomasvotruba/lines": "^0.5.1",
-        "symfony/var-dumper": "7.1.*"
+        "symfony/var-dumper": "7.3.*"
     },
     "config": {
         "allow-plugins": {
@@ -95,7 +95,7 @@
     "extra": {
         "symfony": {
             "allow-contrib": false,
-            "require": "7.1.*"
+            "require": "7.3.*"
         }
     }
 }
