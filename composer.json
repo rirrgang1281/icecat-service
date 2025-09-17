@@ -19,7 +19,6 @@
         "nelmio/api-doc-bundle": "^4.26",
         "nelmio/cors-bundle": "^2.4",
         "opis/json-schema": "^2.3",
-        "symfony/console": "7.1.*",
         "symfony/dotenv": "7.1.*",
         "symfony/expression-language": "7.1.*",
         "symfony/flex": "^2",
