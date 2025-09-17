@@ -26,7 +26,6 @@
         "symfony/intl": "7.3.*",
         "symfony/monolog-bundle": "^3.10",
         "symfony/property-access": "7.3.*",
-        "symfony/runtime": "7.3.*",
         "symfony/uid": "7.3.*",
         "symfony/var-exporter": "7.3.*",
         "symfony/yaml": "7.3.*",
