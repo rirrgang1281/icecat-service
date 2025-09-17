@@ -22,7 +22,6 @@
         "symfony/dotenv": "7.3.*",
         "symfony/expression-language": "7.3.*",
         "symfony/flex": "^2",
-        "symfony/framework-bundle": "7.3.*",
         "symfony/http-client": "7.3.*",
         "symfony/intl": "7.3.*",
         "symfony/monolog-bundle": "^3.10",
